@@ -8,419 +8,486 @@
     android:padding="10dp"
     >
 
-    <!-- 1box-->
+    <!-- border layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:padding="10dp"
-        android:layout_weight="1"
         android:orientation="vertical"
         >
 
-        <!-- main box -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            >
-
-            <!-- toolbar -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:background="#ffffff"
-                android:layout_weight="8"
-                >
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="test1"
-                    android:layout_weight="1"
-                    android:id="@+id/btn1"
-                    />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="test2"
-                    android:layout_weight="1"
-                    android:id="@+id/btn2"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="test3"
-                    android:layout_weight="1"
-                    android:id="@+id/btn3"/>
-            </LinearLayout>
-
-            <!-- menu bar -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingBottom="10dp"
-                >
-                <!-- row 0 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac1"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac2"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac3"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-            </LinearLayout>
-
-                <!-- row 1 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac4"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac5"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac6"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!-- row 2 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac7"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac8"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac8"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1">
-
-                        <ImageView
-                            android:id="@+id/re_mac9"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="5"
-                            android:src="@drawable/re_mac9"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="와퍼 셋트"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-
-
-
-
-        <!-- sub box -->
+        <!-- 1box-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:orientation="horizontal"
             android:background="#ffffff"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
             >
 
-            <!-- left button -->
+            <!-- main box -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="5"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="#ffffff"
                 >
 
-                <ImageButton
+                 <!--toolbar-->
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tabs">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test1"/>
+
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test2"/>
+
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test3"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:background="#ffffff"-->
+<!--                    android:layout_weight="8"-->
+<!--                    >-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="test1"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:id="@+id/btn1"-->
+<!--                        />-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="test2"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:id="@+id/btn2"/>-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="test3"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:id="@+id/btn3"/>-->
+<!--                </LinearLayout>-->
+
+                <!-- menu bar -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/re_left"
-                    android:background="#ffffff"/>
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    >
+                    <!-- row 0 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        >
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac1"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac2"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac3"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+                </LinearLayout>
+
+                    <!-- row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac4"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac5"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac6"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac7"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac8"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/re_mac9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5"
+                                android:src="@drawable/re_mac9"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="와퍼 셋트"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- submenu content -->
+
+
+
+
+            <!-- sub box -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="6"
                 android:orientation="horizontal"
-                android:gravity="left"
-                android:layout_weight="1"
                 >
 
-                <!-- one menu box -->
+                <!-- left button -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="left"
-                    android:orientation="vertical"
-                    android:background="#00ff00"
-                    android:id="@+id/menubox">
+                    android:layout_weight="5"
+                    >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
+                    <ImageButton
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:src="@drawable/re_mac2"/>
+                        android:src="@drawable/re_left"
+                        android:background="#ffffff"/>
 
+                </LinearLayout>
+                <!-- submenu content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <!-- one menu box -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:layout_weight="2"
-                        >
+                        android:orientation="vertical"
+                        android:id="@+id/menubox">
 
-                        <ImageButton
-                            android:layout_width="5dp"
+                        <ImageView
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
-                            android:src="@drawable/re_minus"/>
+                            android:layout_weight="1"
+                            android:src="@drawable/re_mac2"/>
 
-                        <TextView
+                        <!-- count button -->
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
+                            android:orientation="horizontal"
                             android:gravity="center"
+                            android:layout_gravity="center"
                             android:layout_weight="2"
-                            android:text="1"/>
+                            >
 
-                        <ImageButton
-                            android:layout_width="5dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/re_plus"/>
+                            <ImageButton
+                                android:layout_width="5dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/re_minus"
+                                android:layout_marginRight="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:text="1"/>
+
+                            <ImageButton
+                                android:layout_width="5dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/re_plus"
+                                android:layout_marginLeft="5dp"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
-
-            <!-- right button -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                >
-
-                <ImageButton
+                <!-- right button -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/re_right"
-                    android:background="#ffffff"/>
+                    android:layout_weight="5"
+                    >
 
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/re_right"
+                        android:background="#ffffff"/>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
 
-    <!--2box-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#C4E6E3"
-        android:layout_weight="3"
-        android:orientation="vertical"
-        android:padding="10dp"
-        >
-
-        <!-- cashe box-->
-        <GridLayout
+        <!--2box-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="3"
             android:orientation="vertical"
             android:padding="10dp"
-            android:layout_weight="1"
             android:background="#ffffff"
             >
 
-            <TextView
+            <!-- cashe box-->
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="2"/>
+                android:columnCount="2"
+                android:rowCount="2"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                >
 
-        </GridLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_blank"
+                    android:textColor="@color/black"
+                    android:text="0 원"/>
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="2"
+                    android:layout_rowWeight="2"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_blank"
+                    android:textColor="@color/black"
+                    android:text="전체 취소"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_columnWeight="2"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:layout_gravity="fill_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_patter"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:text="결제" />
+
+            </GridLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
