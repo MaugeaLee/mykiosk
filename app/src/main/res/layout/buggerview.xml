@@ -70,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/menu_box_oren"
             android:layout_marginVertical="5dp"
             android:orientation="vertical">
 
@@ -79,18 +78,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/menu_box_oren_fill"
                 android:textColor="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:textSize="25dp"
                 android:text="사이즈"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientatino="horizontal"
-                android:padding="5dp">
+                android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren_fill"
                     android:textColor="#FFFFFF"
                     android:text="small"/>
@@ -99,17 +101,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
-                    android:text="mideum"/>
+                    android:text="mideum\n+500원"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
-                    android:text="Large"/>
+                    android:text="Large\n+1000원"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -118,7 +122,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/menu_box_oren"
             android:layout_marginVertical="5dp"
             android:layout_weight="1">
 
@@ -127,18 +130,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/menu_box_oren_fill"
                 android:textColor="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:textSize="25dp"
                 android:text="얼음"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientatino="horizontal"
-                android:padding="5dp">
+                android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren_fill"
                     android:textColor="#FFFFFF"
                     android:text="small"/>
@@ -147,6 +153,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="mideum"/>
@@ -155,6 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="Large"/>
@@ -166,7 +174,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/menu_box_oren"
             android:layout_marginVertical="5dp"
             android:layout_weight="1">
 
@@ -175,18 +182,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/menu_box_oren_fill"
                 android:textColor="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:textSize="25dp"
                 android:text="토핑"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientatino="horizontal"
-                android:padding="5dp">
+                android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren_fill"
                     android:textColor="#FFFFFF"
                     android:text="small"/>
@@ -195,6 +205,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="mideum"/>
@@ -203,6 +214,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="Large"/>
@@ -214,7 +226,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/menu_box_oren"
             android:layout_marginVertical="5dp"
             android:layout_weight="1">
 
@@ -223,18 +234,21 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/menu_box_oren_fill"
                 android:textColor="#FFFFFF"
+                android:paddingLeft="15dp"
+                android:textSize="25dp"
                 android:text="추천 사이드 메뉴"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientatino="horizontal"
-                android:padding="5dp">
+                android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren_fill"
                     android:textColor="#FFFFFF"
                     android:text="small"/>
@@ -243,6 +257,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="mideum"/>
@@ -251,6 +266,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
                     android:text="Large"/>
@@ -259,14 +275,59 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="3">
 
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="3"
+            android:id="@+id/result_box"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_blank"
+                android:text="취소"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_patter"
+                android:textColor="@color/white"
+                android:text="담기" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/result_box"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="30dp"
+                android:text="2000원"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>
