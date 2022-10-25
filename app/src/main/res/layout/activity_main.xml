@@ -20,7 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#ffffff"
-            android:padding="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_weight="1"
             android:orientation="vertical"
             >
@@ -31,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1"
-                android:background="#ffffff"
+                android:background="@color/white"
                 >
 
                  <!--toolbar-->
@@ -97,8 +99,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
                     android:orientation="vertical"
                     android:paddingBottom="10dp"
+
                     >
                     <!-- row 0 -->
                     <LinearLayout
@@ -112,7 +116,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            >
 
                             <ImageView
                                 android:id="@+id/re_mac1"
@@ -209,7 +214,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            >
 
                             <ImageView
                                 android:id="@+id/re_mac5"
@@ -324,6 +330,30 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/circle"/>
+
+                    </LinearLayout>>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -331,98 +361,295 @@
 
 
             <!-- sub box -->
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="6"
-                android:orientation="horizontal"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/button_blank"
                 >
 
-                <!-- left button -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    >
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/re_left"
-                        android:background="#ffffff"/>
-
-                </LinearLayout>
-                <!-- submenu content -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/topitem"
                     >
 
-                    <!-- one menu box -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:id="@+id/menubox">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="6"
+                        android:background="@color/black"
+                        android:rowCount="1">
 
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:src="@drawable/re_mac2"/>
-
-                        <!-- count button -->
-                        <LinearLayout
+                        <TextView
+                            android:layout_columnWeight="1"
+                            android:layout_column="0"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:layout_gravity="center"
-                            android:layout_weight="2"
-                            >
+                            android:textColor="@color/white"
+                            android:text="No"/>
 
-                            <ImageButton
-                                android:layout_width="5dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/re_minus"
-                                android:layout_marginRight="5dp"/>
+                        <TextView
+                            android:layout_column="1"
+                            android:layout_columnWeight="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="이름"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:text="1"/>
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_columnWeight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="옵션"/>
 
-                            <ImageButton
-                                android:layout_width="5dp"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/re_plus"
-                                android:layout_marginLeft="5dp"/>
+                        <TextView
+                            android:layout_column="3"
+                            android:layout_columnWeight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="수량"/>
 
-                        </LinearLayout>
+                        <TextView
+                            android:layout_column="4"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="가격"/>
 
-                    </LinearLayout>
+                        <TextView
+                            android:layout_column="5"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="삭제"/>
 
+                    </GridLayout>
                 </LinearLayout>
 
-                <!-- right button -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/topitem"
                     >
 
-                    <ImageButton
+                    <!-- grid item -->
+                    <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/re_right"
-                        android:background="#ffffff"/>
+                        android:layout_height="wrap_content"
+                        android:columnCount="6"
+                        android:rowCount="1">
 
+                        <TextView
+                            android:layout_columnWeight="1"
+                            android:layout_column="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="No"/>
+
+                        <TextView
+                            android:layout_column="1"
+                            android:layout_columnWeight="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="이름"/>
+
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_columnWeight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="옵션"/>
+
+                        <TextView
+                            android:layout_column="3"
+                            android:layout_columnWeight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="수량"/>
+
+                        <TextView
+                            android:layout_column="4"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="가격"/>
+
+                        <TextView
+                            android:layout_column="5"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="삭제"/>
+
+
+                    </GridLayout>
                 </LinearLayout>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true">
+
+                    <!-- item result -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="4"
+                        android:rowCount="1"
+                        android:background="@drawable/menu_box">
+
+                        <TextView
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="주문 개수"
+                            android:textColor="@color/white"
+                            android:background="@color/black"/>
+
+                        <TextView
+                            android:layout_column="1"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="N"/>
+
+                        <TextView
+                            android:layout_column="2"
+                            android:layout_columnWeight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:background="@color/black"
+                            android:textColor="@color/white"
+                            android:text="금액 : "/>
+
+                        <TextView
+                            android:layout_column="3"
+                            android:layout_columnWeight="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="0원"/>
+
+                    </GridLayout>
+                </LinearLayout>
+
+
+
+<!--                &lt;!&ndash; left button &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="5"-->
+<!--                    >-->
+
+<!--                    <ImageButton-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/re_left"-->
+<!--                        android:background="#ffffff"/>-->
+
+<!--                </LinearLayout>-->
+<!--                &lt;!&ndash; submenu content &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_weight="1"-->
+<!--                    >-->
+
+<!--                    &lt;!&ndash; one menu box &ndash;&gt;-->
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:id="@+id/menubox">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="80dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:src="@drawable/re_mac2"/>-->
+
+<!--                        &lt;!&ndash; count button &ndash;&gt;-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:gravity="center"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="2"-->
+<!--                            >-->
+
+<!--                            <ImageButton-->
+<!--                                android:layout_width="5dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/re_minus"-->
+<!--                                android:layout_marginRight="5dp"/>-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:gravity="center"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:text="1"/>-->
+
+<!--                            <ImageButton-->
+<!--                                android:layout_width="5dp"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:src="@drawable/re_plus"-->
+<!--                                android:layout_marginLeft="5dp"/>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                &lt;!&ndash; right button &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="5"-->
+<!--                    >-->
+
+<!--                    <ImageButton-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/re_right"-->
+<!--                        android:background="#ffffff"/>-->
+
+<!--                </LinearLayout>-->
+            </RelativeLayout>
         </LinearLayout>
 
 
@@ -430,7 +657,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="3"
+            android:layout_weight="9"
             android:orientation="vertical"
             android:padding="10dp"
             android:background="#ffffff"
@@ -454,35 +681,33 @@
                     android:layout_rowWeight="2"
                     android:layout_column="0"
                     android:layout_row="0"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/button_blank"
-                    android:textColor="@color/black"
-                    android:text="0 원"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="2"
-                    android:layout_rowWeight="2"
-                    android:layout_column="0"
-                    android:layout_row="1"
-                    android:layout_marginTop="5dp"
                     android:background="@drawable/button_blank"
                     android:textColor="@color/black"
                     android:text="전체 취소"/>
 
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:layout_width="181dp"-->
+<!--                    android:layout_height="92dp"-->
+<!--                    android:layout_row="1"-->
+<!--                    android:layout_rowWeight="2"-->
+<!--                    android:layout_column="0"-->
+<!--                    android:layout_columnWeight="2"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:background="@drawable/button_blank"-->
+<!--                    android:text="전체 취소"-->
+<!--                    android:textColor="@color/black" />-->
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_columnWeight="2"
+                    android:layout_columnWeight="6"
                     android:layout_column="1"
                     android:layout_row="0"
                     android:layout_rowSpan="2"
-                    android:layout_gravity="fill_vertical"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/button_patter"
                     android:textColor="#ffffff"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:textStyle="bold"
                     android:text="결제" />
 

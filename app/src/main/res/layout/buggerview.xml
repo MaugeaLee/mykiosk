@@ -85,7 +85,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientatino="horizontal"
+                android:orientation="horizontal"
                 android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -137,7 +137,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientatino="horizontal"
+                android:orientation="horizontal"
                 android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -189,7 +189,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientatino="horizontal"
+                android:orientation="horizontal"
                 android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -241,7 +241,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientatino="horizontal"
+                android:orientation="horizontal"
                 android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -296,6 +296,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:background="@drawable/button_blank"
+                android:id="@+id/bugger_exit"
                 android:text="취소"/>
 
 
