@@ -127,6 +127,7 @@
                                 android:src="@drawable/re_mac1"/>
 
                             <TextView
+                                android:id="@+id/menu_text1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -149,11 +150,12 @@
                                 android:src="@drawable/re_mac2"/>
 
                             <TextView
+                                android:id="@+id/menu_text2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트2"
                                 />
                         </LinearLayout>
 
@@ -171,11 +173,12 @@
                                 android:src="@drawable/re_mac3"/>
 
                             <TextView
+                                android:id="@+id/menu_text3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트3"
                                 />
                         </LinearLayout>
                 </LinearLayout>
@@ -202,11 +205,12 @@
                                 android:src="@drawable/re_mac4"/>
 
                             <TextView
+                                android:id="@+id/menu_text4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트4"
                                 />
                         </LinearLayout>
 
@@ -225,11 +229,12 @@
                                 android:src="@drawable/re_mac5"/>
 
                             <TextView
+                                android:id="@+id/menu_text5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트5"
                                 />
                         </LinearLayout>
 
@@ -247,11 +252,12 @@
                                 android:src="@drawable/re_mac6"/>
 
                             <TextView
+                                android:id="@+id/menu_text6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트6"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -277,11 +283,12 @@
                                 android:src="@drawable/re_mac7"/>
 
                             <TextView
+                                android:id="@+id/menu_text7"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트7"
                                 />
                         </LinearLayout>
 
@@ -292,6 +299,7 @@
                             android:layout_weight="1">
 
                             <ImageView
+
                                 android:id="@+id/re_mac8"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -299,11 +307,12 @@
                                 android:src="@drawable/re_mac8"/>
 
                             <TextView
+                                android:id="@+id/menu_text8"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트8"
                                 />
                         </LinearLayout>
 
@@ -321,17 +330,19 @@
                                 android:src="@drawable/re_mac9"/>
 
                             <TextView
+                                android:id="@+id/menu_text9"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
-                                android:text="와퍼 셋트"
+                                android:text="와퍼 셋트9"
                                 />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
