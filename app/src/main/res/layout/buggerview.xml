@@ -36,6 +36,7 @@
             android:paddingLeft="10dp">
 
             <TextView
+                android:id="@+id/menu_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="bugger name"
@@ -80,7 +81,7 @@
                 android:textColor="#FFFFFF"
                 android:paddingLeft="15dp"
                 android:textSize="25dp"
-                android:text="사이즈"/>
+                android:text="음료"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,31 +90,34 @@
                 android:paddingVertical="5dp">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/drink_cola"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren_fill"
                     android:textColor="#FFFFFF"
-                    android:text="small"/>
+                    android:text="코카 콜라"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/drink_cider"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
-                    android:text="mideum\n+500원"/>
+                    android:text="사이다"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/drink_milk_shake"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:layout_marginHorizontal="5dp"
                     android:background="@drawable/menu_box_oren"
                     android:textColor="@color/oren"
-                    android:text="Large\n+1000원"/>
+                    android:text="밀크 쉐이크\n+1000원"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -132,7 +136,7 @@
                 android:textColor="#FFFFFF"
                 android:paddingLeft="15dp"
                 android:textSize="25dp"
-                android:text="얼음"/>
+                android:text="사이드 메뉴 사이즈"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -184,7 +188,7 @@
                 android:textColor="#FFFFFF"
                 android:paddingLeft="15dp"
                 android:textSize="25dp"
-                android:text="토핑"/>
+                android:text="추가 토핑"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -317,6 +321,7 @@
             android:layout_centerHorizontal="true">
 
             <TextView
+                android:id="@+id/bugger_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"

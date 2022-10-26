@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,68 +19,56 @@ import java.sql.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    MenuDAO menuDAO;
 
+    public void menuOrd(TextView tv){
+        String name = tv.getText().toString();
 
-    public void setInitMenu(MyDBHelper myDBhelper, MenuDAO menu){
-        SQLiteDatabase db = myDBhelper.getWritableDatabase();
-        myDBhelper.onUpgrade(db, 1, 2);
-
-        for(int count=0; count < menu.menu_first.length; count++) {
-            String menu_name = menu.menu_first[count];
-            db.execSQL("INSERT INTO groupTBL VALUES(null, '" + menu_name + "', 0, 0, 'null','null2')");
-
-        }
-        for(int count=0; count < menu.menu_second.length; count++){
-            String menu_name = menu.menu_second[count];
-            db.execSQL("INSERT INTO groupTBL VALUES(null, '"+ menu_name +"', 0, 0, 'null', 'null2')");
-        }
-        for(int count=0; count < menu.menu_third.length; count++){
-            String menu_name = menu.menu_third[count];
-            db.execSQL("INSERT INTO groupTBL VALUES(null, '"+ menu_name +"', 0, 0, 'null', 'null2')");
-        }
-
-        db.close();
-    }
-
-    public void setViewMenu(MyDBHelper myDBhelper, ArrayList<TextView> tv){
-        SQLiteDatabase db = myDBhelper.getReadableDatabase();
-        String sql = "select * from groupTBL";
-        Cursor cursor = db.rawQuery(sql, null);
-
-        int count = 0;
-        while (cursor.moveToNext()) {
-            String name = cursor.getString(1);
-            tv.get(count).setText(name);
-            count++;
-
-            if (count == tv.size()){
-                break;
-            }
-        }
-        cursor.close();
-        db.close();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        TextView menuTV_0, menuTV_1, menuTV_2, menuTV_3, menuTV_4, menuTV_5, menuTV_6, menuTV_7, menuTV_8;
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* db reset */
-//        MyDBHelper myDBHelper = new MyDBHelper(this);
-//        SQLiteDatabase sqlDB = myDBHelper.getWritableDatabase();
-//        menuDAO = new MenuDAO();
-//        setInitMenu(sqlDB, menuDAO);
-//        sqlDB.close();
+        /* Widget reset */
+        TextView menuTV_0, menuTV_1, menuTV_2, menuTV_3, menuTV_4, menuTV_5, menuTV_6, menuTV_7, menuTV_8;
+        LinearLayout menuLay_0, menuLay_1, menuLay_2, menuLay_3, menuLay_4, menuLay_5, menuLay_6, menuLay_7, menuLay_8;
 
+        /* db reset */
         MyDBHelper myDBHelper = new MyDBHelper(this);
-        menuDAO = new MenuDAO();
-        setInitMenu(myDBHelper, menuDAO);
-        Toast.makeText(getApplicationContext(), "db reset", Toast.LENGTH_SHORT).show();
+
+
+        /* DAO reset */
+        MenuDAO menuDAO = new MenuDAO();
+        menuDAO.TABLE_NAME = "groupTBL";
+
+
+        /* DTO reset */
+        MenuDTO menuDTO = new MenuDTO();
+        menuDTO.setInitMenu(myDBHelper, menuDAO);
+
+        /* menuLay reset */
+        ArrayList<LinearLayout> btnMenuLay = new ArrayList<>();
+
+        menuLay_0 = (LinearLayout) findViewById(R.id.menu_lay1);
+        menuLay_1 = (LinearLayout) findViewById(R.id.menu_lay2);
+        menuLay_2 = (LinearLayout) findViewById(R.id.menu_lay3);
+        menuLay_3 = (LinearLayout) findViewById(R.id.menu_lay4);
+        menuLay_4 = (LinearLayout) findViewById(R.id.menu_lay5);
+        menuLay_5 = (LinearLayout) findViewById(R.id.menu_lay6);
+        menuLay_6 = (LinearLayout) findViewById(R.id.menu_lay7);
+        menuLay_7 = (LinearLayout) findViewById(R.id.menu_lay8);
+        menuLay_8 = (LinearLayout) findViewById(R.id.menu_lay9);
+        btnMenuLay.add(menuLay_0);
+        btnMenuLay.add(menuLay_1);
+        btnMenuLay.add(menuLay_2);
+        btnMenuLay.add(menuLay_3);
+        btnMenuLay.add(menuLay_4);
+        btnMenuLay.add(menuLay_5);
+        btnMenuLay.add(menuLay_6);
+        btnMenuLay.add(menuLay_7);
+        btnMenuLay.add(menuLay_8);
+
 
         /* menuBTN reset */
         ArrayList<ImageView> btnImageArrayList = new ArrayList<>();
@@ -125,33 +115,31 @@ public class MainActivity extends AppCompatActivity {
         tvMenuArrayList.add(menuTV_7);
         tvMenuArrayList.add(menuTV_8);
 
-        setViewMenu(myDBHelper, tvMenuArrayList);
-
-        btnSelect_00.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Intent intent = new Intent(getApplicationContext(), BuggerView.class);
-
-                startActivity(intent);
-                return false;
-            }
-        });
+        /* menu title STR setting */
+        menuDTO.setViewMenu(myDBHelper, tvMenuArrayList, menuDAO);
 
 
-        btnSelect_01.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                switch(motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
+        /* menu Lay btn setting */
+        for (int i=0; i < btnMenuLay.size(); i++){
+            final int count = i;
+            btnMenuLay.get(i).setOnTouchListener(new View.OnTouchListener() {
+                TextView menu_tv_name = tvMenuArrayList.get(count);
+                String title = menu_tv_name.getText().toString();
+                String db_title = menuDAO.TABLE_NAME;
 
-                        Toast.makeText(getApplicationContext(), "insert", Toast.LENGTH_SHORT).show();
-                    }
+                @Override
+                public boolean onTouch(View view, MotionEvent motionEvent) {
+                    Intent intent = new Intent(getApplicationContext(), BuggerView.class);
+                    intent.putExtra("name", title);
+                    intent.putExtra("db_title", db_title);
+                    startActivity(intent);
+                    return false;
                 }
-                return false;
-            }
-        });
+            });
+        }
 
-
-
+        /* reset OK */
+        Toast.makeText(getApplicationContext(), "db reset", Toast.LENGTH_SHORT).show();
     }
+
 }

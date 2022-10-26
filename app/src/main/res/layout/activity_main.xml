@@ -113,6 +113,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/menu_lay1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -137,6 +138,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -147,7 +149,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="5"
-                                android:src="@drawable/re_mac2"/>
+                                android:src="@drawable/re_mac2" />
 
                             <TextView
                                 android:id="@+id/menu_text2"
@@ -160,6 +162,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay3"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -192,6 +195,7 @@
                         >
 
                         <LinearLayout
+                            android:id="@+id/menu_lay4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -215,6 +219,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay5"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -239,6 +244,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay6"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -270,6 +276,7 @@
                         android:orientation="horizontal"
                         >
                         <LinearLayout
+                            android:id="@+id/menu_lay7"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -293,6 +300,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay8"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
@@ -317,6 +325,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/menu_lay9"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
