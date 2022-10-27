@@ -382,6 +382,7 @@
 
             <!-- sub box -->
             <RelativeLayout
+                android:id="@+id/basket_main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
@@ -400,6 +401,7 @@
                     >
 
                     <GridLayout
+                        android:id="@+id/basket_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:columnCount="6"

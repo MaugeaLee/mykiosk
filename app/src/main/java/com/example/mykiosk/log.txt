@@ -1,0 +1,5 @@
+**Project Programming Log**
+
+10.27 12:30 갯수 추가 버튼 만들다가 맘 view만 만들어두고 id 설정도 안했음
+10.27 15:00 인탠트 result 되돌아오는거 추가.
+10.27 17:41 MAIN_BASKET에 HashMap으로 입력한 ArrayList 데이터 채워넣는 작업 도중 퇴근

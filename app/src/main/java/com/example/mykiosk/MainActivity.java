@@ -1,5 +1,6 @@
 package com.example.mykiosk;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,18 +13,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
+    /* init primery Value */
+    int order_menu_id = 0;
+    ArrayList<HashMap> MAIN_BASKET = new ArrayList<>();
 
-    public void menuOrd(TextView tv){
-        String name = tv.getText().toString();
-
-    }
+    RelativeLayout BASKET_LIST_RE = (RelativeLayout) findViewById(R.id.basket_main);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,9 +133,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onTouch(View view, MotionEvent motionEvent) {
                     Intent intent = new Intent(getApplicationContext(), BuggerView.class);
+                    intent.putExtra("id", order_menu_id);
                     intent.putExtra("name", title);
                     intent.putExtra("db_title", db_title);
-                    startActivity(intent);
+                    startActivityForResult(intent, 0);
                     return false;
                 }
             });
@@ -142,4 +146,41 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "db reset", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            HashMap<Integer, MenuSelect> basket_H = new HashMap<>();
+            MenuSelect menuSelect = new MenuSelect();
+
+
+            menuSelect.id = data.getIntExtra("id" , 0);
+            menuSelect.bugger_id = data.getIntExtra("bugger_id", 0);
+            menuSelect.drink_price = data.getIntExtra("drink_price" , 0);
+            menuSelect.side_price = data.getIntExtra("side_price" , 0);
+            menuSelect.top_ping_price = data.getIntExtra("top_ping_price" , 0);
+            menuSelect.add_side_price = data.getIntExtra("add_side_price" , 0);
+            menuSelect.menu_num = data.getIntExtra("menu_num" , 0);
+            menuSelect.result_price = data.getIntExtra("result_price" , 0);
+            order_menu_id = menuSelect.id;
+
+            basket_H.put(order_menu_id, menuSelect);
+            MAIN_BASKET.add(basket_H);
+
+            Toast.makeText(getApplicationContext(), String.format("%d", order_menu_id), Toast.LENGTH_SHORT).show();
+            }
+        else if (resultCode == RESULT_CANCELED){
+            order_menu_id = data.getIntExtra("id", 0);
+            Toast.makeText(getApplicationContext(), String.format("%d", order_menu_id), Toast.LENGTH_SHORT).show();
+        }
+    }
+//
+//    public void setBasketList(){
+//        LinearLayout.LayoutParams basket_obj = new LinearLayout.LayoutParams(
+//                LinearLayout.LayoutParams.MATCH_PARENT,
+//                LinearLayout.LayoutParams.WRAP_CONTENT);
+//
+//
+//
+//    }
 }
