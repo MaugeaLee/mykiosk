@@ -1,5 +1,11 @@
 **Project Programming Log**
 
+2022/10/27 (목)
 10.27 12:30 갯수 추가 버튼 만들다가 맘 view만 만들어두고 id 설정도 안했음
 10.27 15:00 인탠트 result 되돌아오는거 추가.
 10.27 17:41 MAIN_BASKET에 HashMap으로 입력한 ArrayList 데이터 채워넣는 작업 도중 퇴근
+
+
+2022/10/28 (금)
+10.28 12:05 작업 시작
+10.28 16:26 MainActivty의 basket_list 의 adapter 만들다가 멘탈 나가서 종료 (주석 처리 하면서 테스트해서 코드 개난장판됨)

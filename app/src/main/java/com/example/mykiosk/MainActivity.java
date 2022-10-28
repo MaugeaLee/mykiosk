@@ -10,23 +10,29 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     /* init primery Value */
     int order_menu_id = 0;
     ArrayList<HashMap> MAIN_BASKET = new ArrayList<>();
 
-    RelativeLayout BASKET_LIST_RE = (RelativeLayout) findViewById(R.id.basket_main);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         /* Widget reset */
         TextView menuTV_0, menuTV_1, menuTV_2, menuTV_3, menuTV_4, menuTV_5, menuTV_6, menuTV_7, menuTV_8;
         LinearLayout menuLay_0, menuLay_1, menuLay_2, menuLay_3, menuLay_4, menuLay_5, menuLay_6, menuLay_7, menuLay_8;
+        Button allCancel;
+
+        TableLayout basket_table;
 
         /* db reset */
         MyDBHelper myDBHelper = new MyDBHelper(this);
@@ -49,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
         /* DTO reset */
         MenuDTO menuDTO = new MenuDTO();
         menuDTO.setInitMenu(myDBHelper, menuDAO);
+
+
+        /* View reset */
+//        basket_table = (TableLayout) findViewById(R.id.basket_table);
 
         /* menuLay reset */
         ArrayList<LinearLayout> btnMenuLay = new ArrayList<>();
@@ -118,8 +131,24 @@ public class MainActivity extends AppCompatActivity {
         tvMenuArrayList.add(menuTV_7);
         tvMenuArrayList.add(menuTV_8);
 
+
+        /* Cancel BTN reset */
+        allCancel = (Button) findViewById(R.id.allCancel);
+
+
         /* menu title STR setting */
         menuDTO.setViewMenu(myDBHelper, tvMenuArrayList, menuDAO);
+
+
+
+
+//        String[] arr = {"안녕", "바바", "고고" ,"구구", "기기"};
+
+        ListView list = (ListView) findViewById(R.id.basket_list_View);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.baket_item);
+        list.setAdapter(adapter);
+
 
 
         /* menu Lay btn setting */
@@ -141,6 +170,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        /* Cancel Btn */
+        allCancel.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                switch(motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        LinearLayout item = (LinearLayout) findViewById(R.id.table_row);
+
+
+//                        LinearLayout item = addBasketList(MAIN_BASKET);
+//                        BASKET_LIST_RE.addView(item);
+                        Toast.makeText(getApplicationContext(), item.toString() , Toast.LENGTH_SHORT).show();
+                }
+                return false;
+            }
+        });
 
         /* reset OK */
         Toast.makeText(getApplicationContext(), "db reset", Toast.LENGTH_SHORT).show();
@@ -174,13 +220,64 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), String.format("%d", order_menu_id), Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    public LinearLayout addBasketList(ArrayList main_basket){
+        /* Params set */
+            // Linear Params
+        LinearLayout.LayoutParams basket_li_para = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
 //
-//    public void setBasketList(){
-//        LinearLayout.LayoutParams basket_obj = new LinearLayout.LayoutParams(
-//                LinearLayout.LayoutParams.MATCH_PARENT,
-//                LinearLayout.LayoutParams.WRAP_CONTENT);
-//
-//
-//
-//    }
+//        GridLayout.LayoutParams basket_grid_para = new GridLayout.LayoutParams(
+//                6,1
+//        );
+
+
+            // tv Params
+        ViewGroup.LayoutParams tv_para = new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+
+
+        /* Layout set */
+        LinearLayout basket_linear = new LinearLayout(this);
+        GridLayout basket_grid = new GridLayout(this);
+
+
+        /* widget init */
+        TextView obj_no = new TextView(this);
+        TextView obj_name = new TextView(this);
+        TextView obj_option = new TextView(this);
+        TextView obj_count = new TextView(this);
+        TextView obj_price = new TextView(this);
+        TextView obj_cancel = new TextView(this);
+
+
+        /* linear setting */
+        basket_linear.setOrientation(LinearLayout.HORIZONTAL);
+
+
+        /* grid setting */
+        basket_grid.setLayoutParams(basket_li_para);
+        basket_grid.setColumnCount(6);
+        basket_grid.setRowCount(1);
+
+
+        /* grid add Wdiget setting */
+        obj_no.setLayoutParams(tv_para);
+
+
+        /* add All */
+        basket_grid.addView(obj_no);
+
+        basket_linear.addView(basket_grid);
+
+
+        return basket_linear;
+
+    }
+
 }

@@ -385,292 +385,318 @@
                 android:id="@+id/basket_main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="4"
-                android:orientation="vertical"
                 android:layout_marginBottom="0dp"
+                android:layout_weight="4"
                 android:background="@drawable/button_blank"
-                >
+                android:orientation="vertical">
+
 
                 <LinearLayout
+                    android:id="@+id/topitem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/topitem"
-                    >
+                    android:orientation="horizontal">
 
                     <GridLayout
                         android:id="@+id/basket_header"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:columnCount="6"
                         android:background="@color/black"
-                        android:rowCount="1">
-
-                        <TextView
-                            android:layout_columnWeight="1"
-                            android:layout_column="0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="No"/>
-
-                        <TextView
-                            android:layout_column="1"
-                            android:layout_columnWeight="3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="이름"/>
-
-                        <TextView
-                            android:layout_column="2"
-                            android:layout_columnWeight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="옵션"/>
-
-                        <TextView
-                            android:layout_column="3"
-                            android:layout_columnWeight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="수량"/>
-
-                        <TextView
-                            android:layout_column="4"
-                            android:layout_columnWeight="2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="가격"/>
-
-                        <TextView
-                            android:layout_column="5"
-                            android:layout_columnWeight="2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:text="삭제"/>
-
-                    </GridLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/topitem"
-                    >
-
-                    <!-- grid item -->
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:columnCount="6"
                         android:rowCount="1">
 
                         <TextView
-                            android:layout_columnWeight="1"
-                            android:layout_column="0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_columnWeight="1"
                             android:gravity="center"
-                            android:hint="No"/>
+                            android:text="No"
+                            android:textColor="@color/white" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="1"
                             android:layout_columnWeight="3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:hint="이름"/>
+                            android:text="이름"
+                            android:textColor="@color/white" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="2"
                             android:layout_columnWeight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:hint="옵션"/>
+                            android:text="옵션"
+                            android:textColor="@color/white" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="3"
                             android:layout_columnWeight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:hint="수량"/>
+                            android:text="수량"
+                            android:textColor="@color/white" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="4"
                             android:layout_columnWeight="2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:hint="가격"/>
+                            android:text="가격"
+                            android:textColor="@color/white" />
 
                         <TextView
-                            android:layout_column="5"
-                            android:layout_columnWeight="2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_column="5"
+                            android:layout_columnWeight="2"
                             android:gravity="center"
-                            android:hint="삭제"/>
-
+                            android:text="삭제"
+                            android:textColor="@color/white" />
 
                     </GridLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/topitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+<!--                    <ScrollView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_below="@id/topitem"-->
+<!--                        android:layout_alignBottom="@+id/topitem">-->
+
+                        <ListView
+                            android:id="@+id/basket_list_View"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="fill_vertical" />
+
+
+                        <!--                    <TableLayout-->
+                        <!--                        android:id="@+id/basket_table"-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="wrap_content"-->
+
+                        <!--                        android:orientation="vertical">-->
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:id="@+id/table_row"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:background="@color/oren"-->
+                        <!--                            android:orientation="horizontal">-->
+
+                        <!--                            &lt;!&ndash; grid item &ndash;&gt;-->
+                        <!--                            <GridLayout-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:columnCount="6"-->
+                        <!--                                android:rowCount="1">-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="0"-->
+                        <!--                                    android:layout_columnWeight="1"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="No" />-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="1"-->
+                        <!--                                    android:layout_columnWeight="3"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="이름" />-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="2"-->
+                        <!--                                    android:layout_columnWeight="1"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="옵션" />-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="3"-->
+                        <!--                                    android:layout_columnWeight="1"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="수량" />-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="4"-->
+                        <!--                                    android:layout_columnWeight="2"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="가격" />-->
+
+                        <!--                                <TextView-->
+                        <!--                                    android:layout_width="wrap_content"-->
+                        <!--                                    android:layout_height="wrap_content"-->
+                        <!--                                    android:layout_column="5"-->
+                        <!--                                    android:layout_columnWeight="2"-->
+                        <!--                                    android:gravity="center"-->
+                        <!--                                    android:hint="삭제" />-->
+
+                        <!--                            </GridLayout>-->
+                        <!--                        </LinearLayout>-->
+                        <!--                    </TableLayout>-->
+<!--                    </ScrollView>-->
+                </LinearLayout>
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_alignParentBottom="true">
+                    android:orientation="vertical">
 
                     <!-- item result -->
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/menu_box"
                         android:columnCount="4"
-                        android:rowCount="1"
-                        android:background="@drawable/menu_box">
+                        android:rowCount="1">
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="0"
                             android:layout_columnWeight="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:background="@color/black"
                             android:gravity="center"
                             android:text="주문 개수"
-                            android:textColor="@color/white"
-                            android:background="@color/black"/>
+                            android:textColor="@color/white" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="1"
                             android:layout_columnWeight="2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:hint="N"/>
+                            android:hint="N" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_column="2"
                             android:layout_columnWeight="2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
                             android:background="@color/black"
-                            android:textColor="@color/white"
-                            android:text="금액 : "/>
+                            android:gravity="center"
+                            android:text="금액 : "
+                            android:textColor="@color/white" />
 
                         <TextView
-                            android:layout_column="3"
-                            android:layout_columnWeight="3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_column="3"
+                            android:layout_columnWeight="3"
                             android:gravity="center"
-                            android:hint="0원"/>
+                            android:hint="0원" />
 
                     </GridLayout>
                 </LinearLayout>
 
 
+                <!--                &lt;!&ndash; left button &ndash;&gt;-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="5"-->
+                <!--                    >-->
 
-<!--                &lt;!&ndash; left button &ndash;&gt;-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_weight="5"-->
-<!--                    >-->
+                <!--                    <ImageButton-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:src="@drawable/re_left"-->
+                <!--                        android:background="#ffffff"/>-->
 
-<!--                    <ImageButton-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/re_left"-->
-<!--                        android:background="#ffffff"/>-->
+                <!--                </LinearLayout>-->
+                <!--                &lt;!&ndash; submenu content &ndash;&gt;-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    >-->
 
-<!--                </LinearLayout>-->
-<!--                &lt;!&ndash; submenu content &ndash;&gt;-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:layout_weight="1"-->
-<!--                    >-->
+                <!--                    &lt;!&ndash; one menu box &ndash;&gt;-->
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:orientation="vertical"-->
+                <!--                        android:id="@+id/menubox">-->
 
-<!--                    &lt;!&ndash; one menu box &ndash;&gt;-->
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:id="@+id/menubox">-->
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="80dp"-->
+                <!--                            android:layout_height="match_parent"-->
+                <!--                            android:layout_weight="1"-->
+                <!--                            android:src="@drawable/re_mac2"/>-->
 
-<!--                        <ImageView-->
-<!--                            android:layout_width="80dp"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:layout_weight="1"-->
-<!--                            android:src="@drawable/re_mac2"/>-->
+                <!--                        &lt;!&ndash; count button &ndash;&gt;-->
+                <!--                        <LinearLayout-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="match_parent"-->
+                <!--                            android:orientation="horizontal"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:layout_gravity="center"-->
+                <!--                            android:layout_weight="2"-->
+                <!--                            >-->
 
-<!--                        &lt;!&ndash; count button &ndash;&gt;-->
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="match_parent"-->
-<!--                            android:orientation="horizontal"-->
-<!--                            android:gravity="center"-->
-<!--                            android:layout_gravity="center"-->
-<!--                            android:layout_weight="2"-->
-<!--                            >-->
+                <!--                            <ImageButton-->
+                <!--                                android:layout_width="5dp"-->
+                <!--                                android:layout_height="match_parent"-->
+                <!--                                android:src="@drawable/re_minus"-->
+                <!--                                android:layout_marginRight="5dp"/>-->
 
-<!--                            <ImageButton-->
-<!--                                android:layout_width="5dp"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:src="@drawable/re_minus"-->
-<!--                                android:layout_marginRight="5dp"/>-->
+                <!--                            <TextView-->
+                <!--                                android:layout_width="wrap_content"-->
+                <!--                                android:layout_height="match_parent"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:layout_weight="1"-->
+                <!--                                android:text="1"/>-->
 
-<!--                            <TextView-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:gravity="center"-->
-<!--                                android:layout_weight="1"-->
-<!--                                android:text="1"/>-->
+                <!--                            <ImageButton-->
+                <!--                                android:layout_width="5dp"-->
+                <!--                                android:layout_height="match_parent"-->
+                <!--                                android:src="@drawable/re_plus"-->
+                <!--                                android:layout_marginLeft="5dp"/>-->
 
-<!--                            <ImageButton-->
-<!--                                android:layout_width="5dp"-->
-<!--                                android:layout_height="match_parent"-->
-<!--                                android:src="@drawable/re_plus"-->
-<!--                                android:layout_marginLeft="5dp"/>-->
+                <!--                        </LinearLayout>-->
 
-<!--                        </LinearLayout>-->
+                <!--                    </LinearLayout>-->
 
-<!--                    </LinearLayout>-->
+                <!--                </LinearLayout>-->
 
-<!--                </LinearLayout>-->
+                <!--                &lt;!&ndash; right button &ndash;&gt;-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="5"-->
+                <!--                    >-->
 
-<!--                &lt;!&ndash; right button &ndash;&gt;-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:layout_weight="5"-->
-<!--                    >-->
+                <!--                    <ImageButton-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:src="@drawable/re_right"-->
+                <!--                        android:background="#ffffff"/>-->
 
-<!--                    <ImageButton-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:src="@drawable/re_right"-->
-<!--                        android:background="#ffffff"/>-->
-
-<!--                </LinearLayout>-->
+                <!--                </LinearLayout>-->
             </RelativeLayout>
         </LinearLayout>
 
@@ -697,6 +723,7 @@
                 >
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/allCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="2"
